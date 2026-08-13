@@ -1,5 +1,3 @@
-<h1 align="center">Juejin Usage ⚡️</h1>
-
 <p align="center">
   <img src="./assets/icon.png" alt="Juejin Usage logo" width="200">
 </p>
