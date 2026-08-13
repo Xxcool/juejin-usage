@@ -1,6 +1,22 @@
+<h1 align="center">Juejin Usage ⚡️</h1>
 
+<p align="center">
+  <img src="./assets/icon.png" alt="Juejin Usage logo" width="200">
+</p>
 
-# Juejin Usage ⚡️
+<p align="center">
+  Token 用量明细追踪工具，本地记录、云端同步，<br>还有线上排行榜看看谁用得最多。
+</p>
+
+<p align="center">
+  <a href="https://github.com/juejin-cn/ai-usage/releases">下载安装包</a>
+  ·
+  <a href="https://juejin.cn/aiusage/rank">排行榜</a>
+  ·
+  <a href="#-用户隐私协议">用户隐私协议</a>
+  ·
+  <a href="https://juejin.cn">稀土掘金</a>
+</p>
 
 ## 🖥️ 客户端使用
 
@@ -8,25 +24,9 @@ Juejin Usage 提供 macOS / Windows 桌面客户端，安装即用，无需额�
 
 ### 下载安装
 
-前往 [Releases](https://github.com/juejin-cn/ai-usage/releases) 页面下载对应系统的安装包：
+前往 [Releases](https://github.com/juejin-cn/ai-usage/releases) 页面下载对应系统的安装包（macOS 按芯片选 `.dmg`，Windows 选 `.exe`），安装即用。
 
-- **macOS**：根据芯片架构选择对应安装包
-  - Apple Silicon (M1/M2/M3/M4)：下载 `-arm64.dmg`
-  - Intel 芯片：下载 `-x64.dmg`
-  - 双击后将 **Juejin Usage** 拖入「应用程序」文件夹
-- **Windows**：下载 `-x64.exe` 安装包，按向导完成安装
-
-
-
-> 💡 **macOS 提示「"Juejin Usage" 已损坏，无法打开，您应该将它移动到废纸篓」**
->
-> 这是因为应用未经过苹果官方签名，触发了 Gatekeeper 安全隔离。打开「终端」执行如下命令即可解决（按提示输入您的密码）：
->
-> ```bash
-> sudo xattr -dr com.apple.quarantine /Applications/Juejin\ Usage.app
-> ```
->
-> 不知道路径怎么写？直接把应用拖到 `sudo xattr -dr com.apple.quarantine `（末尾有空格）后面即可。
+> 💡 macOS 提示「已损坏」？在终端执行 `sudo xattr -dr com.apple.quarantine` 后把应用拖入终端窗口即可。
 
 ### 首次启动
 
@@ -103,10 +103,6 @@ tud sync --source=claude
 
 前往 [掘金 AI 使用排行榜](https://juejin.cn/aiusage/rank) 查看排名。
 
-## 🤝 贡献指南
-
-查阅 [Contributing Guide](./CONTRIBUTING.md) 了解如何参与本项目。
-
 ## 🔒 用户隐私协议
 
 本产品采用本地优先架构，数据默认仅存储于您的设备。
@@ -120,3 +116,11 @@ tud sync --source=claude
 > 除了上报您使用的用量总数外，不会采集您任何信息。
 
 具体内容前往点击查看用户隐私协议: 《[稀土掘金用户隐私协议](#)》
+
+## 🤝 贡献指南
+
+查阅 [Contributing Guide](./CONTRIBUTING.md) 了解如何参与本项目。
+
+## 📚 参考项目
+
+- [xxx](https://github.com/xxx/xxx) — xxx
