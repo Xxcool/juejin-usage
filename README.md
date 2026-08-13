@@ -1,0 +1,122 @@
+
+
+# Juejin Usage ⚡️
+
+## 🖥️ 客户端使用
+
+Juejin Usage 提供 macOS / Windows 桌面客户端，安装即用，无需额外配置。
+
+### 下载安装
+
+前往 [Releases](https://github.com/juejin-cn/ai-usage/releases) 页面下载对应系统的安装包：
+
+- **macOS**：根据芯片架构选择对应安装包
+  - Apple Silicon (M1/M2/M3/M4)：下载 `-arm64.dmg`
+  - Intel 芯片：下载 `-x64.dmg`
+  - 双击后将 **Juejin Usage** 拖入「应用程序」文件夹
+- **Windows**：下载 `-x64.exe` 安装包，按向导完成安装
+
+
+
+> 💡 **macOS 提示「"Juejin Usage" 已损坏，无法打开，您应该将它移动到废纸篓」**
+>
+> 这是因为应用未经过苹果官方签名，触发了 Gatekeeper 安全隔离。打开「终端」执行如下命令即可解决（按提示输入您的密码）：
+>
+> ```bash
+> sudo xattr -dr com.apple.quarantine /Applications/Juejin\ Usage.app
+> ```
+>
+> 不知道路径怎么写？直接把应用拖到 `sudo xattr -dr com.apple.quarantine `（末尾有空格）后面即可。
+
+### 首次启动
+
+1. 打开 **Juejin Usage** 应用
+2. 首次运行会自动尝试注册 Claude / Codex Hook 并同步本地用量
+3. 面板将自动弹出，展示用量趋势、模型分布等数据
+
+如未检测到 Claude / Codex 等 Agent 工具，请确认已安装并使用过至少一次。
+
+### 登录掘金（可选）
+
+在面板「设置」中点击「掘金登录」，绑定账号后可：
+
+- 多设备用量合并查看
+- 参与 [AI 使用排行榜](https://juejin.cn/aiusage/rank)
+
+## ⌨️ CLI使用
+
+### 安装
+
+需要 Node.js >= 20。
+
+```bash
+npm i -g @juejin-opensource/tud-cli
+```
+
+### 快速开始
+
+推荐用后台服务启动（常驻，支持开机自启，macOS / Windows）：
+
+```bash
+tud service start
+# 面板: http://127.0.0.1:8452
+```
+
+首次启动会写入数据目录 `~/.ai-usage/`，尝试注册 Claude / Codex Hook，并同步本地用量。
+
+常用管理：
+
+```bash
+tud service status
+tud service stop
+tud status
+```
+
+需要前台运行（当前终端占用、方便看日志）时再用：
+
+```bash
+tud start
+# Ctrl+C 停止
+```
+
+### 命令一览
+
+| 命令 | 说明 |
+|------|------|
+| `tud service <action>` | **推荐** 后台服务与开机自启；`action`: `start` \| `stop` \| `status` |
+| `tud` / `tud start` | 前台启动本地面板与同步 |
+| `tud stop` | 停止当前进程内的前台服务 |
+| `tud status` | 查看 CLI / 面板当前状态 |
+| `tud sync` | 手动同步本地用量数据 |
+| `tud upload` | 上报数据到云端 |
+| `tud help` | 显示帮助 |
+
+### 常用选项
+
+```bash
+tud start --port 8452
+tud sync --source=claude
+```
+
+
+## 🏆 排行榜
+
+前往 [掘金 AI 使用排行榜](https://juejin.cn/aiusage/rank) 查看排名。
+
+## 🤝 贡献指南
+
+查阅 [Contributing Guide](./CONTRIBUTING.md) 了解如何参与本项目。
+
+## 🔒 用户隐私协议
+
+本产品采用本地优先架构，数据默认仅存储于您的设备。
+
+- 📊 **本地采集**：Token 用量、模型名称、来源渠道（仅本机存储）
+- 🚫 **绝不收集**：对话内容、Prompt 文本、主机名、项目名、API Key
+- ☁️ **云端同步**：需您主动开启，仅上报脱敏的 Token 计数与匿名设备标识
+- 🔐 **存储安全**：本地数据存储在 `~/.ai-usage/`，云端鉴权采用加密 Token
+- 🎛️ **您的控制**：随时可开关云端同步，或删除本地数据目录清除全部记录
+
+> 除了上报您使用的用量总数外，不会采集您任何信息。
+
+具体内容前往点击查看用户隐私协议: 《[稀土掘金用户隐私协议](#)》
