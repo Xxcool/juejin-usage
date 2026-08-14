@@ -34,6 +34,15 @@ Juejin Usage 提供 macOS / Windows 桌面客户端，安装即用，无需额�
 
 如未检测到 Claude / Codex 等 Agent 工具，请确认已安装并使用过至少一次。
 
+### 桌面宠物（可选）
+
+在面板「设置」中点击「桌面宠物」，打开 「显示桌面宠物」，提供 3 个可选的宠物
+
+|            Click             |            Yoyo            |             Hawking              |
+| :--------------------------: | :------------------------: | :------------------------------: |
+| ![Click](./assets/click.png) | ![Yoyo](./assets/yoyo.png) | ![Hawking](./assets/hawking.png) |
+
+
 ### 登录掘金（可选）
 
 在面板「设置」中点击「掘金登录」，绑定账号后可：
@@ -79,15 +88,15 @@ tud start
 
 ### 命令一览
 
-| 命令 | 说明 |
-|------|------|
+| 命令                   | 说明                                                                 |
+| ---------------------- | -------------------------------------------------------------------- |
 | `tud service <action>` | **推荐** 后台服务与开机自启；`action`: `start` \| `stop` \| `status` |
-| `tud` / `tud start` | 前台启动本地面板与同步 |
-| `tud stop` | 停止当前进程内的前台服务 |
-| `tud status` | 查看 CLI / 面板当前状态 |
-| `tud sync` | 手动同步本地用量数据 |
-| `tud upload` | 上报数据到云端 |
-| `tud help` | 显示帮助 |
+| `tud` / `tud start`    | 前台启动本地面板与同步                                               |
+| `tud stop`             | 停止当前进程内的前台服务                                             |
+| `tud status`           | 查看 CLI / 面板当前状态                                              |
+| `tud sync`             | 手动同步本地用量数据                                                 |
+| `tud upload`           | 上报数据到云端                                                       |
+| `tud help`             | 显示帮助                                                             |
 
 ### 常用选项
 
@@ -121,4 +130,6 @@ tud sync --source=claude
 
 ## 📚 参考项目
 
-- [xxx](https://github.com/xxx/xxx) — xxx
+- [Token Tracker](https://github.com/xiufengsun/TokenTracker): 自动采集 30 款 AI 编码工具 的 token 用量，用一套漂亮的 Dashboard 看真实成本与趋势。
+- [vibe-usage](https://github.com/vibe-cafe/vibe-usage): Token 使用量统计工具（CLI）
+- [OpenUsage](https://github.com/robinebers/openusage): The Only AI Usage Tracker That's Truly Yours
