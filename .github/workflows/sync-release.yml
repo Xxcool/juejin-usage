@@ -16,20 +16,27 @@ jobs:
           echo "🏷️ Release 标签: ${{ github.event.release.tag_name }}"
 
       - name: 🔄 同步 GitHub Release 到 Gitee
+        id: sync_release
         uses: trustedinster/sync-release-gitee@v1.3
+        timeout-minutes: 10
+        continue-on-error: true
         with:
           gitee_owner: 'juejin-cn'
           gitee_repo: 'juejin-usage'
           gitee_token: ${{ secrets.GITEE_TOKEN }}
           github_owner: ${{ github.repository_owner }}
           github_repo: ${{ github.event.repository.name }}
+          release_name: ${{ github.event.release.name }}
+          release_body: ${{ github.event.release.body }}
           gitee_upload_retry_times: 3
           debug: false
 
       - name: ✅ 打印成功信息
-        if: success()
+        if: steps.sync_release.outcome == 'success'
         run: echo "✅ 同步成功完成！"
 
-      - name: ❌ 打印失败信息
-        if: failure()
-        run: echo "❌ 同步失败！请检查日志。"
+      - name: ⚠️ 打印失败兜底信息
+        if: steps.sync_release.outcome == 'failure'
+        run: |
+          echo "❌ 同步失败！请检查日志。"
+          echo "::warning::同步 Gitee Release 失败，已触发兜底机制，任务正常结束。"
