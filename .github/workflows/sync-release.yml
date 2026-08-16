@@ -1,0 +1,35 @@
+name: 🚀 同步 Release 到 Gitee
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  sync-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📢 打印开始信息
+        run: |
+          echo "🚀 开始同步 GitHub Release 到 Gitee..."
+          echo "📦 源仓库: ${{ github.repository }}"
+          echo "🎯 目标仓库: https://gitee.com/juejin-cn/juejin-usage"
+          echo "🏷️ Release 标签: ${{ github.event.release.tag_name }}"
+
+      - name: 🔄 同步 GitHub Release 到 Gitee
+        uses: trustedinster/sync-release-gitee@v1.3
+        with:
+          gitee_owner: 'juejin-cn'
+          gitee_repo: 'juejin-usage'
+          gitee_token: ${{ secrets.GITEE_TOKEN }}
+          github_owner: ${{ github.repository_owner }}
+          github_repo: ${{ github.event.repository.name }}
+          gitee_upload_retry_times: 3
+          debug: false
+
+      - name: ✅ 打印成功信息
+        if: success()
+        run: echo "✅ 同步成功完成！"
+
+      - name: ❌ 打印失败信息
+        if: failure()
+        run: echo "❌ 同步失败！请检查日志。"
