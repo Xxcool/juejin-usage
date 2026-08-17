@@ -7,7 +7,25 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/juejin-cn/ai-usage/releases">下载安装包</a>
+  <a href="https://github.com/juejin-cn/juejin-usage">
+    <img src="https://img.shields.io/github/stars/juejin-cn/juejin-usage?style=flat-square" alt="stars">
+  </a>
+  <a href="https://github.com/juejin-cn/juejin-usage/issues">
+    <img src="https://img.shields.io/github/issues/juejin-cn/juejin-usage?style=flat-square" alt="issues">
+  </a>
+  <a href="https://github.com/juejin-cn/juejin-usage/releases">
+    <img src="https://img.shields.io/github/downloads/juejin-cn/juejin-usage/total?style=flat-square" alt="downloads">
+  </a>
+  <a href="https://github.com/juejin-cn/juejin-usage/releases/latest">
+    <img src="https://img.shields.io/github/v/release/juejin-cn/juejin-usage?include_prereleases&style=flat-square" alt="release">
+  </a>
+  <a href="https://github.com/juejin-cn/juejin-usage/commits/main">
+    <img src="https://img.shields.io/github/last-commit/juejin-cn/juejin-usage?style=flat-square" alt="last-commit">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/juejin-cn/juejin-usage/releases">下载安装包</a>
   ·
   <a href="https://juejin.cn/aiusage/rank">排行榜</a>
   ·
@@ -22,7 +40,7 @@ Juejin Usage 提供 macOS / Windows 桌面客户端，安装即用，无需额�
 
 ### 下载安装
 
-前往 [Releases](https://github.com/juejin-cn/ai-usage/releases) 页面下载对应系统的安装包（macOS 按芯片选 `.dmg`，Windows 选 `.exe`），安装即用。
+前往 [Releases](https://github.com/juejin-cn/juejin-usage/releases) 页面下载对应系统的安装包（macOS 按芯片选 `.dmg`，Windows 选 `.exe`），安装即用。
 
 > 💡 macOS 提示「已损坏」？在终端执行 `sudo xattr -dr com.apple.quarantine` 后把应用拖入终端窗口即可。
 
