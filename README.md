@@ -75,7 +75,25 @@ Juejin Usage 提供 macOS / Windows 桌面客户端，安装即用，无需额�
 需要 Node.js >= 20。
 
 ```bash
-npm i -g @juejin-opensource/tud-cli
+npm i -g @juejin-opensource/jusage
+```
+
+> 💡 国内网络较慢时，可使用镜像源安装：
+
+```bash
+npm i -g @juejin-opensource/jusage --registry=https://registry.npmmirror.com/
+```
+
+> 💡 也可免安装直接用 `npx` 启动：
+
+```bash
+# 后台常驻（推荐，支持开机自启）
+npx @juejin-opensource/jusage service start
+
+# 前台运行（当前终端占用，方便看日志，Ctrl+C 停止）
+npx @juejin-opensource/jusage start
+
+# 面板: http://127.0.0.1:8452
 ```
 
 ### 快速开始
@@ -83,7 +101,7 @@ npm i -g @juejin-opensource/tud-cli
 推荐用后台服务启动（常驻，支持开机自启，macOS / Windows）：
 
 ```bash
-tud service start
+jusage service start
 # 面板: http://127.0.0.1:8452
 ```
 
@@ -92,15 +110,15 @@ tud service start
 常用管理：
 
 ```bash
-tud service status
-tud service stop
-tud status
+jusage service status
+jusage service stop
+jusage status
 ```
 
 需要前台运行（当前终端占用、方便看日志）时再用：
 
 ```bash
-tud start
+jusage start
 # Ctrl+C 停止
 ```
 
@@ -108,19 +126,19 @@ tud start
 
 | 命令                   | 说明                                                                 |
 | ---------------------- | -------------------------------------------------------------------- |
-| `tud service <action>` | **推荐** 后台服务与开机自启；`action`: `start` \| `stop` \| `status` |
-| `tud` / `tud start`    | 前台启动本地面板与同步                                               |
-| `tud stop`             | 停止当前进程内的前台服务                                             |
-| `tud status`           | 查看 CLI / 面板当前状态                                              |
-| `tud sync`             | 手动同步本地用量数据                                                 |
-| `tud upload`           | 上报数据到云端                                                       |
-| `tud help`             | 显示帮助                                                             |
+| `jusage service <action>` | **推荐** 后台服务与开机自启；`action`: `start` \| `stop` \| `status` |
+| `jusage` / `jusage start`    | 前台启动本地面板与同步                                               |
+| `jusage stop`             | 停止当前进程内的前台服务                                             |
+| `jusage status`           | 查看 CLI / 面板当前状态                                              |
+| `jusage sync`             | 手动同步本地用量数据                                                 |
+| `jusage upload`           | 上报数据到云端                                                       |
+| `jusage help`             | 显示帮助                                                             |
 
 ### 常用选项
 
 ```bash
-tud start --port 8452
-tud sync --source=claude
+jusage start --port 8452
+jusage sync --source=claude
 ```
 
 
