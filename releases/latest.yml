@@ -1,8 +1,8 @@
-version: 0.1.3
+version: 0.1.4
 files:
-  - url: https://github.com/juejin-cn/juejin-usage/releases/download/v0.1.3/Juejin.Usage.Setup.0.1.3.exe
-    sha512: 5QguHGMSN4nKc3+fEW89G/bgjFCCau7zPpDRsRd3xKgBeDVuYzQAJEcLT0QmMlKwQsUFz6hcvcOpPQA8ECcTgA==
-    size: 80347012
-path: Juejin.Usage.Setup.0.1.3.exe
-sha512: 5QguHGMSN4nKc3+fEW89G/bgjFCCau7zPpDRsRd3xKgBeDVuYzQAJEcLT0QmMlKwQsUFz6hcvcOpPQA8ECcTgA==
-releaseDate: '2026-08-20T05:06:09.565Z'
+  - url: https://github.com/juejin-cn/juejin-usage/releases/download/v0.1.4/Juejin.Usage.Setup.0.1.4.exe
+    sha512: bNxsTa97tcs1qxypNSaubxdY9LyYIDB2P95ekE6p9exrYCqlcp/IWbvhk9sGAoTPg6TWc0AcF+YVNA9TBA5Amw==
+    size: 80356884
+path: Juejin.Usage.Setup.0.1.4.exe
+sha512: bNxsTa97tcs1qxypNSaubxdY9LyYIDB2P95ekE6p9exrYCqlcp/IWbvhk9sGAoTPg6TWc0AcF+YVNA9TBA5Amw==
+releaseDate: '2026-08-21T07:16:20.308Z'
