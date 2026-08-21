@@ -1,9 +1,9 @@
 version: 0.1.3
 files:
-  - url: https://gitee.com/juejin-cn/juejin-usage/releases/download/v0.1.3/Juejin.Usage-0.1.3-arm64-mac.zip
+  - url: https://github.com/juejin-cn/juejin-usage/releases/download/v0.1.3/Juejin.Usage-0.1.3-arm64-mac.zip
     sha512: 9taMO/g017zkfo1totvGFBxvgPCf3au283WOj0gNWGgSsCX+Pztcn4Nn7PefM6HF64E+Q2wo0EySbBaff5Oxpg==
     size: 92423655
-  - url: https://gitee.com/juejin-cn/juejin-usage/releases/download/v0.1.3/Juejin.Usage-0.1.3-mac.zip
+  - url: https://github.com/juejin-cn/juejin-usage/releases/download/v0.1.3/Juejin.Usage-0.1.3-mac.zip
     sha512: 1PgfPx8A2XofUHLGNjdeLirtky6wPCRKro9JvKmywAHZvzYcNp6Op6oQJaiTMBiJFPTH3JWsFAlglOvGdQZ/cw==
     size: 98396906
 path: Juejin.Usage-0.1.3-arm64-mac.zip
