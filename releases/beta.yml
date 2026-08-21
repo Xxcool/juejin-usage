@@ -1,8 +1,8 @@
 version: 0.1.4
 files:
-  - url: https://github.com/juejin-cn/juejin-usage/releases/download/v0.1.4/Juejin.Usage.Setup.0.1.4.exe
+  - url: https://gitee.com/juejin-cn/juejin-usage/releases/download/v0.1.4/Juejin%20Usage%20Setup%200.1.4.exe
     sha512: bNxsTa97tcs1qxypNSaubxdY9LyYIDB2P95ekE6p9exrYCqlcp/IWbvhk9sGAoTPg6TWc0AcF+YVNA9TBA5Amw==
     size: 80356884
-path: Juejin.Usage.Setup.0.1.4.exe
+path: Juejin Usage Setup 0.1.4.exe
 sha512: bNxsTa97tcs1qxypNSaubxdY9LyYIDB2P95ekE6p9exrYCqlcp/IWbvhk9sGAoTPg6TWc0AcF+YVNA9TBA5Amw==
 releaseDate: '2026-08-21T07:16:20.308Z'
